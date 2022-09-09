@@ -12,7 +12,3 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-}
