@@ -16,21 +16,39 @@
       <h1 class="hidden"></h1>
       <h1 class="header">Contact Us</h1>
       <form class="contactform" method="post">
-
         <div class="name-input">
-          <input type="text" name="firstname" placeholder="First Name" />
-          <input type="text" name="lastname" placeholder="Last Name" />
+          <input
+            type="text"
+            name="firstname"
+            placeholder="First Name"
+            class="first-name"
+            required
+          />
+          <input
+            type="text"
+            name="lastname"
+            placeholder="Last Name"
+            class="last-name"
+            required
+          />
         </div>
 
         <div class="gender-input">
-          <label for="gender">M</label>
-          <input type="radio" name="gender" />
-          <label for="gender">F</label>
-          <input type="radio" name="gender" />
+          <label for="gender" class="gender-label">Gender:</label>
+          <div class="masc">
+            <input type="radio" name="gender"  required/>
+            <label for="gender" class="label">M</label>
+          </div>
+          <div class="fem">
+            <input type="radio" name="gender" required />
+            <label for="gender" class="label">F</label>
+          </div>
         </div>
 
-       <div class="text-input"><input type="text" name="text" placeholder="Your text here" /></div> 
-        <button type="submit">Submit</button>
+        <div class="text-input">
+          <textarea name="" id="text-area" cols="30" rows="5" placeholder="Your text here.."></textarea>
+        </div>
+        <button type="submit" class="submit">Submit</button>
       </form>
     </div>
 
