@@ -74,6 +74,7 @@ input{
 .gender-label{
   display: flex;
   justify-content: flex-start;
+  align-content: center;
   color: #ccc5b9;
 }
 
