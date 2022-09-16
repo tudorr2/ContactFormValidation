@@ -23,6 +23,8 @@ body {
   overflow: hidden;
   width: 400px;
   max-width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .header {
@@ -45,12 +47,12 @@ body {
   position: relative;
 }
 
-.form-control label{
+.form-control label {
   display: inline-block;
   margin-bottom: 5px;
 }
 
-.form-control input{
+.form-control input {
   border: 2px solid #f0f0f0;
   border-radius: 4px;
   display: block;
@@ -59,56 +61,88 @@ body {
   padding: 10px;
   width: 100%;
 }
-
-.form-control.succes input{
-
-border-color: green;
-
+.form-control textarea {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 14px;
+  font-family: inherit;
+  padding: 10px;
+  width: 100%;
+  resize: none;
 }
-.form-control.error input{
 
+.form-control.succes input {
+  border-color: green;
+}
+.form-control.error input {
   border-color: red;
-  
-  }
-.form-control i{
+}
+
+.form-control.succes textarea {
+  border-color: green;
+}
+.form-control.error textarea {
+  border-color: red;
+}
+
+.form-control.error input[type="radio"]{
+  border-color: red;
+}
+
+.form-control i {
   visibility: hidden;
   position: absolute;
-  top:40px;
+  top: 40px;
   right: 10px;
 }
 
-.form-control.succes i.fa-check-circle{
+.form-control.succes i.fa-check-circle {
   visibility: visible;
-  color:  green;
+  color: green;
 }
 
-.form-control.error .fa-exclamation-circle{
+.form-control.error .fa-exclamation-circle {
   visibility: visible;
-  color:  red;
+  color: red;
 }
 
-.form-control small{
+.gender-paid,
+.gender-free {
+  position: relative;
+}
+
+.form-control input[type="radio"] {
+  position: absolute;
+  left: -119px;
+  bottom: 28.1px;
+  
+}
+
+
+
+
+
+.form-control small {
   visibility: hidden;
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-.form-control.error small{
-visibility: visible;
-color:red;
+.form-control.error small {
+  visibility: visible;
+  color: red;
 }
 
-.form button{
+.form button {
   background-color: purple;
-  border:2px solid purple ;
+  border: 2px solid purple;
   display: block;
   color: #fff;
   width: 100%;
   font-size: 16px;
   font-family: inherit;
   border-radius: 4px;
-  padding: 10px;  
-
+  padding: 10px;
 }
-
