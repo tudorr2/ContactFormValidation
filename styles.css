@@ -86,7 +86,7 @@ body {
   border-color: red;
 }
 
-.form-control.error input[type="radio"]{
+.form-control.error input[type="radio"] {
   border-color: red;
 }
 
@@ -116,12 +116,7 @@ body {
   position: absolute;
   left: -119px;
   bottom: 28.1px;
-  
 }
-
-
-
-
 
 .form-control small {
   visibility: hidden;
@@ -145,4 +140,21 @@ body {
   font-family: inherit;
   border-radius: 4px;
   padding: 10px;
+}
+.checked-message {
+  margin: 10px;
+  height: 5vh;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  
+}
+.hidden h1{
+  visibility: hidden;
+
+}
+
+.green{
+  background-color: lightgreen;
+
 }

@@ -6,6 +6,7 @@ const password2 = document.getElementById("password2");
 const message = document.getElementById("message");
 const free = document.getElementById("subscription-free");
 const paid = document.getElementById("subscription-paid");
+const valmessage = document.getElementById("checked-message");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -19,6 +20,8 @@ function checkInputs() {
   const passwordValue = password.value.trim();
   const password2Value = password2.value.trim();
   const messageValue = message.value.trim();
+  const closeTag = document.getElementById("close-tag");
+
 
   if (
     username.checkValidity() &&
@@ -27,6 +30,9 @@ function checkInputs() {
     message.checkValidity() &&
     password2.checkValidity()
   ) {
+    displayMessage();
+    valmessage.className = "checked-message green";
+    
     console.log(`Username: ${usernameValue}`);
     console.log(`Email: ${emailValue}`);
     console.log(`Message: ${messageValue}`);
@@ -39,7 +45,6 @@ function checkInputs() {
   } else if (paid.checked) {
     console.log("Paid Subscription");
   }
-
 
   if (usernameValue === "") {
     setErrorFor(username, "Username cannot be blank");
@@ -88,11 +93,8 @@ function checkInputs() {
   } else if ((!paid.checked && free, checked)) {
     setErrorFor(paid, "Please choose a subscription");
   }
-
-if(){
-    displayMessage();
-}
-
+  closeTag.addEventListener("click", closeTag());
+  
 }
 
 function setErrorFor(input, message) {
@@ -113,6 +115,11 @@ function isEmail(email) {
   );
 }
 
-function displayMessage(){
-    
+function displayMessage() {
+  valmessage.innerHTML = `<i class="fas fa-check-circle"></i> &nbsp Thank you for contacting us, ${username.value} &nbsp <button class = "close-tag" id = "close-tag"><i class="fa-solid fa-x"></i></button>`;
+}
+
+function closeTag(){
+    valmessage.innerText = '';
+    valmessage.className = "close-tag";
 }
