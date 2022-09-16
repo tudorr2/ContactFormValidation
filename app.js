@@ -1,3 +1,4 @@
+
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
@@ -93,7 +94,10 @@ function checkInputs() {
   } else if ((!paid.checked && free, checked)) {
     setErrorFor(paid, "Please choose a subscription");
   }
-  closeTag.addEventListener("click", closeTag());
+  closeTag.addEventListener("click", function(){
+    valmessage.innerHTML = '';
+    valmessage.className = "close-tag hidden";
+  });
   
 }
 
@@ -116,10 +120,6 @@ function isEmail(email) {
 }
 
 function displayMessage() {
-  valmessage.innerHTML = `<i class="fas fa-check-circle"></i> &nbsp Thank you for contacting us, ${username.value} &nbsp <button class = "close-tag" id = "close-tag"><i class="fa-solid fa-x"></i></button>`;
+  valmessage.innerHTML = `<i class="fas fa-check-circle check"></i> &nbsp Thank you for contacting us, ${username.value} &nbsp <button class = "close-tag" id = "close-tag"><i class="fa-solid fa-x"></i></button>`;
 }
 
-function closeTag(){
-    valmessage.innerText = '';
-    valmessage.className = "close-tag";
-}

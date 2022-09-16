@@ -6,6 +6,9 @@
   padding: 0;
 }
 
+        
+
+
 body {
   background-color: aliceblue;
   font-family: "Noto Sans", sans-serif;
@@ -147,14 +150,33 @@ body {
   font-size: 15px;
   display: flex;
   align-items: center;
-  
+  flex-wrap: wrap;
+  border-radius: 8px;
 }
-.hidden h1{
+.hidden  {
   visibility: hidden;
-
 }
 
-.green{
+.close-tag i {
   background-color: lightgreen;
+  color: black;
 
 }
+
+.close-tag{
+  background-color: lightgreen;
+  border: 0px lightgreen;
+  position: relative;
+  top: 2px;
+  left: 75px;
+  cursor: pointer;
+}
+.check{
+  position: relative;
+  left:4px;
+  top:2px
+}
+.green {
+  background-color: lightgreen;
+}
+
