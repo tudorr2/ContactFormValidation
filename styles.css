@@ -25,14 +25,13 @@ body {
   width: 500px;
   margin: auto;
   margin-top: 100px;
-  
 }
 
-input{
-  background:#ccc5b9 ;
+input {
+  background: #ccc5b9;
 }
 
-::placeholder{
+::placeholder {
   color: #252422;
 }
 
@@ -50,8 +49,7 @@ input{
   text-align: center;
   align-items: center;
   margin: 10px;
-  margin-left: 30px ;
-  
+  margin-left: 30px;
 }
 
 .header {
@@ -60,34 +58,40 @@ input{
   justify-content: center;
 }
 
-.gender-input{
+.gender-input {
   display: flex;
   flex-direction: column;
   text-align: center;
-  align-items:center ;
+  align-items: center;
   margin: 10px 12px;
-  
-  
-  color:#ccc5b9;
+
+  color: #ccc5b9;
 }
 
-.gender-label{
+.gender-label {
   display: flex;
   justify-content: flex-start;
   align-content: center;
   color: #ccc5b9;
 }
 
-#text-area{
+#text-area {
   background-color: #ccc5b9;
 }
 
-.submit{
+.submit {
   width: 100%;
   margin-bottom: 20px;
   background: #ffaa00;
   border-color: #ffaa00;
   height: 20px;
-  border-radius: 20px ;
-} 
+  border-radius: 20px;
+}
 
+.invalid {
+  position: relative;
+  animation: shake 0.1s linear;
+  animation-iteration-count: 3;
+  box-shadow: 0 0 0 3px rgb(190, 46, 46) !important;
+  outline: none;
+}

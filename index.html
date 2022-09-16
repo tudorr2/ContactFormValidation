@@ -13,6 +13,7 @@
   </head>
   <body>
     <div class="container">
+      
       <h1 class="hidden hidden-header"></h1>
       <h1 class="header">Contact Us</h1>
       <form class="contactform" method="post">
@@ -22,6 +23,7 @@
             name="firstname"
             placeholder="First Name"
             class="first-name"
+            pattern="[a-zA-Z -]{3,}"
             required
           />
           <input
@@ -29,6 +31,7 @@
             name="lastname"
             placeholder="Last Name"
             class="last-name"
+            pattern="[a-zA-Z -]{3,}"
             required
           />
         </div>
@@ -36,17 +39,25 @@
         <div class="gender-input">
           <label for="gender" class="gender-label">Gender:</label>
           <div class="masc">
-            <input type="radio" name="gender"  required/>
+            <input type="radio" name="gender" required class="gender-masc"/>
             <label for="gender" class="label">M</label>
           </div>
           <div class="fem">
-            <input type="radio" name="gender" required />
+            <input type="radio" name="gender" required class="gender-fem" />
             <label for="gender" class="label">F</label>
           </div>
         </div>
 
         <div class="text-input">
-          <textarea name="" id="text-area" cols="25" rows="4" placeholder="Your text here.."></textarea>
+          <textarea
+            name=""
+            id="text-area"
+            cols="25"
+            rows="4"
+            placeholder="Your text here.."
+            class="message"
+            minlength="10"
+          ></textarea>
         </div>
         <button type="submit" class="submit">Submit</button>
       </form>
