@@ -1,1 +1,1 @@
-# ContactFormValidation
+# Simple contact form with validation
