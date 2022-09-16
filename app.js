@@ -81,19 +81,17 @@ function checkInputs() {
     setSuccesFor(message);
   }
   if (!free.checked && !paid.checked) {
-    setErrorFor(free, "Please select a subscription");
     setErrorFor(paid, "Please select a subscription");
-  } else if ((free.checked && !paid, checked)) {
+    setErrorFor(free, "Please select a subscription");
+}
+free.addEventListener('click', function(){
     setSuccesFor(free);
-  } else {
     setSuccesFor(paid);
-  }
-
-  if (!free.checked && paid.checked) {
-    setErrorFor(free, "Please choose a subscription");
-  } else if ((!paid.checked && free, checked)) {
-    setErrorFor(paid, "Please choose a subscription");
-  }
+})
+paid.addEventListener('click', function(){
+    setSuccesFor(free);
+    setSuccesFor(paid);
+})
   closeTag.addEventListener("click", function(){
     valmessage.innerHTML = '';
     valmessage.className = "close-tag hidden";
