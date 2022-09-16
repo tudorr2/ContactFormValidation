@@ -13,57 +13,39 @@
   </head>
   <body>
     <div class="container">
-      <form name="custom-form">
-        <div class="form-box">
-          <div class="input-row">
-            <input
-              type="text"
-              placeholder="Please enter your name"
-              name="name"
-            />
-            <span class="error">Please enter a your full name</span>
-          </div>
-          <div class="input-row">
-            <input
-              type="text"
-              placeholder="Please enter your name"
-              name="name"
-            />
-            <span class="error">Please enter a your full name</span>
-          </div>
-          <div class="input-row">
-            <input
-              type="text"
-              placeholder="Please enter your name"
-              name="name"
-            />
-            <span class="error">Please enter a your full name</span>
-          </div>
-          <div class="input-row">
-            <input
-              type="text"
-              placeholder="Please enter your name"
-              name="name"
-            />
-            <span class="error">Please enter a your full name</span>
-          </div>
-          <div class="input-row">
-            <input
-              type="text"
-              placeholder="Please enter your name"
-              name="name"
-            />
-            <span class="error">Please enter a your full name</span>
-          </div>
-          <div class="input-row">
-            <input
-              type="text"
-              placeholder="Please enter your name"
-              name="name"
-            />
-            <span class="error">Please enter a your full name</span>
-          </div>
+      <div class="header">
+        <h2>Create Account</h2>
+      </div>
+      <form action="" class="form" id="form">
+        <div class="form-control succes">
+          <label for="">Username</label>
+          <input type="text" placeholder="Username" id="username" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
         </div>
+        <div class="form-control error">
+          <label for="">Email</label>
+          <input type="email" placeholder="example@email.com" id="email" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="">Password</label>
+          <input type="password" placeholder="Password" id="password" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="">Password check</label>
+          <input type="password" placeholder="Password " id="password" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <button>Submit</button>
       </form>
     </div>
 
