@@ -1,4 +1,3 @@
-
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
@@ -11,6 +10,8 @@ const valmessage = document.getElementById("checked-message");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  displayMessage();
+  valmessage.className = "checked-message green";
 
   checkInputs();
 });
@@ -23,17 +24,13 @@ function checkInputs() {
   const messageValue = message.value.trim();
   const closeTag = document.getElementById("close-tag");
 
-
   if (
-    username.checkValidity() &&
-    email.checkValidity() &&
-    password.checkValidity() &&
-    message.checkValidity() &&
-    password2.checkValidity()
+    !username.checkValidity() &&
+    !email.checkValidity() &&
+    !password.checkValidity() &&
+    !message.checkValidity() &&
+    !password2.checkValidity()
   ) {
-    displayMessage();
-    valmessage.className = "checked-message green";
-    
     console.log(`Username: ${usernameValue}`);
     console.log(`Email: ${emailValue}`);
     console.log(`Message: ${messageValue}`);
@@ -83,20 +80,20 @@ function checkInputs() {
   if (!free.checked && !paid.checked) {
     setErrorFor(paid, "Please select a subscription");
     setErrorFor(free, "Please select a subscription");
-}
-free.addEventListener('click', function(){
+  }
+  free.addEventListener("click", function () {
     setSuccesFor(free);
     setSuccesFor(paid);
-})
-paid.addEventListener('click', function(){
-    setSuccesFor(free);
-    setSuccesFor(paid);
-})
-  closeTag.addEventListener("click", function(){
-    valmessage.innerHTML = '';
-    valmessage.className = "close-tag hidden";
   });
-  
+  paid.addEventListener("click", function () {
+    setSuccesFor(free);
+    setSuccesFor(paid);
+  });
+  closeTag.addEventListener("click", function () {
+    valmessage.innerText = "";
+    valmessage.className = "close-tag hidden";
+    
+  });
 }
 
 function setErrorFor(input, message) {
@@ -120,4 +117,3 @@ function isEmail(email) {
 function displayMessage() {
   valmessage.innerHTML = `<i class="fas fa-check-circle check"></i> &nbsp Thank you for contacting us, ${username.value} &nbsp <button class = "close-tag" id = "close-tag"><i class="fa-solid fa-x"></i></button>`;
 }
-
