@@ -108,12 +108,13 @@ function setSuccesFor(input) {
   formControl.className = "form-control succes";
 }
 
+
+function displayMessage() {
+  valmessage.innerHTML = `<i class="fas fa-check-circle check"></i> &nbsp Thank you for contacting us, ${username.value} &nbsp <button class = "close-tag" id = "close-tag"><i class="fa-solid fa-x"></i></button>`;
+}
+
 function isEmail(email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
     email
   );
-}
-
-function displayMessage() {
-  valmessage.innerHTML = `<i class="fas fa-check-circle check"></i> &nbsp Thank you for contacting us, ${username.value} &nbsp <button class = "close-tag" id = "close-tag"><i class="fa-solid fa-x"></i></button>`;
 }
